@@ -1,7 +1,7 @@
 (function($){
     $(document).ready(function() {
         $('.block.link.soon').tinytip({
-            
+
             position : 'bottom',
             animation : {
                 top: +10
@@ -22,7 +22,7 @@
         });
 
         $(".fixed-menu-button").click(function(){
-            
+
             $('.fixed-overlay').show().animate({
                 opacity : '0.6'
             }, 250);
@@ -35,6 +35,10 @@
         });
 
         $(".fixed-menu-button-close, .fixed-overlay").click(function(){
+            $('.text.menu').text('MENU');
+            $('.menu_list').show();
+            $('.contact_us').hide();
+
             $('.fixed-overlay').animate({
                 opacity : '0'
             }, 250, function(){
@@ -50,9 +54,13 @@
 
         $('.active a, .disabled a').click(function(){
         	return false;
-        }); 
-        // $('.mainlogo, .flogo').click(function(){
-        //     window.location.href = "http://sweefty.com";
-        // });
+        });
+
+        $('#contact_us').click(function(){
+            $('.text.menu').text('CONTACT US');
+            $('.menu_list').hide();
+            $('.contact_us').show();
+            return false;
+        });
     });
 }(jQuery));

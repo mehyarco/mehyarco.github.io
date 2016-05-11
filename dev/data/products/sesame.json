@@ -1,0 +1,25 @@
+{
+	"IMGbase" : "../assets/images/products/sesame",
+	"items" : [
+
+		{
+			"img"  : "tahina2",
+			"name" : "Tahina"
+		},
+
+		{
+			"img"  : "halava2",
+			"name" : "Halava"
+		},
+
+		{
+			"img"  : "halava_with_pistachio2",
+			"name" : "Halava With Pistachio"
+		},
+
+		{
+			"img"  : "halava_with_choclate2",
+			"name" : "Halava With Choclate"
+		}
+	]
+}

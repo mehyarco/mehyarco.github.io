@@ -1,0 +1,43 @@
+{{#config}}
+
+	{
+		"title" : "Sesame Products, tahina, halawa",
+		"description" : "100% Pure Sesame Products",
+		"keywords" : "Sesame, tahina, halawa",
+	}
+
+{{/config}}
+
+{{> header}}
+
+<div class="container">
+
+	<div class="intro row">
+		<div class="column grid-12">
+			<div class="block">
+				<div class="top-sep"></div>
+
+				<div class="splash">
+					<h1>Sesame Products</h1>
+					<h2>100% Pure Sesame Products</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			{{#products 'products/sesame.json'}}
+				{{#each items}}
+				<div class="column grid-6">
+					<div class="grid-item block outline">
+						<img alt="{{this.name}}" src="{{../IMGbase}}/{{this.img}}.jpg">
+						<h2>{{this.name}}</h2>
+					</div>
+				</div>
+				{{/each}}
+			{{/products}}
+		</div>
+	</div>
+	{{> footer}}
+</div>

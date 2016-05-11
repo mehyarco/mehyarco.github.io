@@ -74,6 +74,9 @@ a {
   display: block;
   padding: 6px 12px;
 }
+.fixed-menu-button-close span.close.contact {
+  display: none;
+}
 .fixed-overlay {
   width: 100%;
   height: 100vh;
@@ -94,15 +97,19 @@ a {
   background: #bbb;
   z-index: 100;
 }
-.fixed-menu ul {
+.fixed-menu ul.menu_list {
   list-style: none;
   padding: 0;
-  margin-top: 50px;
+  margin-top: 30px;
+  padding-bottom: 0;
 }
-.fixed-menu ul li {
+.fixed-menu ul.menu_list li {
   margin: 0 10px;
 }
-.fixed-menu ul li a {
+.fixed-menu ul.menu_list li.last {
+  margin-bottom: 0;
+}
+.fixed-menu ul.menu_list li a {
   display: block;
   padding: 15px;
   color: #fff;
@@ -112,7 +119,25 @@ a {
   -o-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-.fixed-menu ul li a:hover {
+.fixed-menu ul.menu_list li a:hover {
+  background: #ccc;
+}
+.fixed-menu ul.contact_us_list {
+  list-style: none;
+  padding: 0;
+  /*margin-top: 50px;*/
+}
+.fixed-menu ul.contact_us_list li {
+  color: #555;
+  font-size: 24px;
+  line-height: 34px;
+}
+.contact_us {
+  display: none;
+  margin: 30px auto;
+  color: #555;
+  padding: 10px;
+  width: 90%;
   background: #ccc;
 }
 .fixed-menu .menu-header {
@@ -350,6 +375,12 @@ h1.logo {
   border-color: #4891DC;
   color: #000;
   border-color: #000;
+}
+.section .block.outline a {
+  color: #ccc;
+}
+.section .block.outline a:visited {
+  color: #ccc;
 }
 .section .block.outline-no-hover {
   -webkit-transition: all 300ms ease-out;
