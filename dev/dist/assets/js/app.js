@@ -1,5 +1,8 @@
 (function($){
     $(document).ready(function() {
+
+        var menu_type = 'menu';
+
         $('.block.link.soon').tinytip({
 
             position : 'bottom',
@@ -35,6 +38,14 @@
         });
 
         $(".fixed-menu-button-close, .fixed-overlay").click(function(){
+            if (menu_type === 'contact_us'){
+                $('.text.menu').text('MENU');
+                $('.menu_list').show();
+                $('.contact_us').hide();
+                menu_type = 'menu';
+                return false;
+            }
+
             $('.text.menu').text('MENU');
             $('.menu_list').show();
             $('.contact_us').hide();
@@ -57,9 +68,14 @@
         });
 
         $('#contact_us').click(function(){
-            $('.text.menu').text('CONTACT US');
-            $('.menu_list').hide();
-            $('.contact_us').show();
+            menu_type = 'contact_us';
+
+            $('.menu_list').fadeOut(150, function(){
+                $('.contact_us').fadeIn(100, function(){
+                    $('.text.menu').text('CONTACT US');
+                });
+            });
+
             return false;
         });
     });

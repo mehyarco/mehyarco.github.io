@@ -1,0 +1,35 @@
+{
+	"IMGbase" : "../assets/images/products/herbs_spices",
+	"items" : [
+
+		{
+			"img"  : "sage",
+			"name" : "Sage"
+		},
+
+		{
+			"img"  : "mixed-herbs",
+			"name" : "Mixed Herbals"
+		},
+
+		{
+			"img"  : "camomile",
+			"name" : "Camomile"
+		},
+
+		{
+			"img"  : "herbal-tea",
+			"name" : "Herbal Tea"
+		},
+
+		{
+			"img"  : "thyme",
+			"name" : "Thyme"
+		},
+
+		{
+			"img"  : "spices",
+			"name" : "Spices"
+		}
+	]
+}

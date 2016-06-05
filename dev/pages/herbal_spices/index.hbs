@@ -1,0 +1,53 @@
+{{#config}}
+	{
+		"title" : "mehyar.co - herbal and spices",
+		"description" : "",
+		"keywords" : "thyme, herbal drink, sage, camomile",
+	}
+{{/config}}
+
+{{> header}}
+
+<div class="container">
+
+	<div class="intro row">
+		<div class="column grid-12">
+			<div class="block">
+				<div class="top-sep"></div>
+
+				<div class="splash">
+					<h1>Herbal & Spices</h1>
+					<h2 style="margin-bottom:0">100% Natural Ingredients</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="column grid-7 center">
+			<div class="block">
+				<div style="margin:0 0 50px 0; display:none;">
+					Directly imported from middle east, we are able to provide large quantities with competitive prices, for more information please contact us, we will be happy to hear from you.
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			{{#products 'products/herbs_spices.json'}}
+				{{#each items}}
+				<div class="column grid-4">
+					<div class="grid-item block outline">
+						<img alt="{{this.name}}" src="{{../IMGbase}}/{{this.img}}.jpg">
+						<h2>{{this.name}}</h2>
+					</div>
+				</div>
+				{{/each}}
+			{{/products}}
+		</div>
+	</div>
+
+	{{> footer}}
+</div>

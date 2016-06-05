@@ -1,0 +1,52 @@
+{
+	"IMGbase" : "../assets/images/products/grocries",
+	"items" : [
+
+		{
+			"img"  : "mouhalabieh",
+			"name" : "Mouhalabieh"
+		},
+
+		{
+			"img"  : "topping-cream",
+			"name" : "Topping Cream"
+		},
+
+		{
+			"img"  : "custard",
+			"name" : "Custard"
+		},
+
+		{
+			"img"  : "mixcake",
+			"name" : "Mix Cake"
+		},
+
+		{
+			"img"  : "cream-caramel",
+			"name" : "Cream Caramel"
+		},
+
+
+		{
+			"img"  : "Jelly-Tot",
+			"name" : "Jelly"
+		},
+
+		{
+			"img"  : "Vanilla-Powder",
+			"name" : "Vanilla Powder"
+		},
+
+		{
+			"img"  : "Baking-Powder",
+			"name" : "Baking Powder"
+		},
+
+		{
+			"img"  : "freekeh",
+			"name" : "Freekeh"
+		}
+
+	]
+}
