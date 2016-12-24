@@ -1,15 +1,15 @@
 var fs = require('fs');
 var path = require('path');
 var paginate = require('handlebars-paginate');
-exports.outLocation = '../';
+exports.outLocation = '../dist/';
 
 var cached = {};
 
-var header = fs.readFileSync(path.resolve(__dirname + '/partials/header.hbs'));
-var footer = fs.readFileSync(path.resolve(__dirname + '/partials/footer.hbs'));
-var below_header = fs.readFileSync(path.resolve(__dirname + '/partials/below_header.hbs'));
-var above_footer = fs.readFileSync(path.resolve(__dirname + '/partials/above_footer.hbs'));
-var pagination = fs.readFileSync(path.resolve(__dirname + '/partials/pagination.hbs'));
+var header = fs.readFileSync(path.resolve(__dirname + '/content/partials/header.hbs'));
+var footer = fs.readFileSync(path.resolve(__dirname + '/content/partials/footer.hbs'));
+var below_header = fs.readFileSync(path.resolve(__dirname + '/content/partials/below_header.hbs'));
+var above_footer = fs.readFileSync(path.resolve(__dirname + '/content/partials/above_footer.hbs'));
+var pagination = fs.readFileSync(path.resolve(__dirname + '/content/partials/pagination.hbs'));
 
 function chunk (arr, len) {
 
@@ -48,7 +48,7 @@ exports.handlebars = function(Handlebars){
         var lists;
         var items;
         if (str){
-            lists = path.resolve(__dirname + '/data/lists/' + str);
+            lists = path.resolve(__dirname + '/content/data/lists/' + str);
             lists = require(lists);
         }
 
@@ -68,7 +68,7 @@ exports.handlebars = function(Handlebars){
 
         var items;
         var data;
-        var lists = path.resolve(__dirname + '/data/' + str);
+        var lists = path.resolve(__dirname + '/content/data/' + str);
 
         if (!cached[lists]){
             data = cached[lists] = require(lists);
@@ -115,3 +115,14 @@ exports.data = {
     "description" : "Mehyar.co - middle east food supplier",
     "title" : "Mehyar.co"
 };
+
+
+var fs = require('fs');
+exports.fileHandler = {
+    'html' : function(dir, content){
+        var content = fs.readFileSync(dir).toString('utf8');
+        return content;
+    },
+    'json' : 'ignore'
+};
+
